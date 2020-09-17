@@ -19,7 +19,7 @@ public class ReadProperyFile {
 			prop.load(fileInput);
 			configKey = prop.getProperty(strConfigKey);
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			System.out.println("There is an exception while reading the file" +e.getMessage());
 			e.printStackTrace();
 		}
 		return configKey;

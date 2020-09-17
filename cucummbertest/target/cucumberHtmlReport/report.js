@@ -1,9 +1,9 @@
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/VerifyLogoTest.feature");
 formatter.feature({
   "line": 2,
-  "name": "verify JP Morgan logo on the home page",
+  "name": "google search test",
   "description": "",
-  "id": "verify-jp-morgan-logo-on-the-home-page",
+  "id": "google-search-test",
   "keyword": "Feature",
   "tags": [
     {
@@ -20,7 +20,7 @@ formatter.scenarioOutline({
   "line": 5,
   "name": "verify logo on JP Morgan homepage",
   "description": "",
-  "id": "verify-jp-morgan-logo-on-the-home-page;verify-logo-on-jp-morgan-homepage",
+  "id": "google-search-test;verify-logo-on-jp-morgan-homepage",
   "type": "scenario_outline",
   "keyword": "Scenario Outline",
   "tags": [
@@ -59,7 +59,7 @@ formatter.examples({
   "line": 12,
   "name": "",
   "description": "",
-  "id": "verify-jp-morgan-logo-on-the-home-page;verify-logo-on-jp-morgan-homepage;",
+  "id": "google-search-test;verify-logo-on-jp-morgan-homepage;",
   "rows": [
     {
       "cells": [
@@ -67,7 +67,7 @@ formatter.examples({
         "keyword"
       ],
       "line": 13,
-      "id": "verify-jp-morgan-logo-on-the-home-page;verify-logo-on-jp-morgan-homepage;;1"
+      "id": "google-search-test;verify-logo-on-jp-morgan-homepage;;1"
     },
     {
       "cells": [
@@ -75,7 +75,7 @@ formatter.examples({
         "J.P. Morgan"
       ],
       "line": 14,
-      "id": "verify-jp-morgan-logo-on-the-home-page;verify-logo-on-jp-morgan-homepage;;2"
+      "id": "google-search-test;verify-logo-on-jp-morgan-homepage;;2"
     }
   ],
   "keyword": "Examples"
@@ -84,7 +84,7 @@ formatter.scenario({
   "line": 14,
   "name": "verify logo on JP Morgan homepage",
   "description": "",
-  "id": "verify-jp-morgan-logo-on-the-home-page;verify-logo-on-jp-morgan-homepage;;2",
+  "id": "google-search-test;verify-logo-on-jp-morgan-homepage;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
@@ -137,7 +137,7 @@ formatter.match({
   "location": "GoogleStepDef.i_navigate_to_webpage_using()"
 });
 formatter.result({
-  "duration": 7947146500,
+  "duration": 8223601100,
   "status": "passed"
 });
 formatter.match({
@@ -150,7 +150,7 @@ formatter.match({
   "location": "GoogleStepDef.i_see_homepage_using(String)"
 });
 formatter.result({
-  "duration": 23891800,
+  "duration": 13832000,
   "status": "passed"
 });
 formatter.match({
@@ -163,21 +163,21 @@ formatter.match({
   "location": "GoogleStepDef.i_search_for_keyword_using(String)"
 });
 formatter.result({
-  "duration": 2594812600,
+  "duration": 2333446400,
   "status": "passed"
 });
 formatter.match({
   "location": "GoogleStepDef.i_select_result()"
 });
 formatter.result({
-  "duration": 6334815200,
+  "duration": 4036012200,
   "status": "passed"
 });
 formatter.match({
   "location": "GoogleStepDef.i_verify_the_logo_on_home_page()"
 });
 formatter.result({
-  "duration": 50269100,
+  "duration": 100652000,
   "status": "passed"
 });
 });

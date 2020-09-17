@@ -1,5 +1,7 @@
 package helper;
 
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -28,7 +30,7 @@ public class TestBase {
 				break;
 			}
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			System.out.println("There is an exception while driver setup" + e.getMessage());
 			e.printStackTrace();
 		}
 		return driver;
@@ -37,7 +39,11 @@ public class TestBase {
 	/* This Method is used to validate whether element is visible */
 	public static boolean isWebElementVisible(WebElement element) {
 		boolean isElementDisplayed = false;
-		isElementDisplayed = element.isEnabled();
+		try {
+			isElementDisplayed = element.isDisplayed();
+		} catch (NoSuchElementException e) {
+			System.out.println("Element is not visible");
+		}
 		return isElementDisplayed;
 	}
 }

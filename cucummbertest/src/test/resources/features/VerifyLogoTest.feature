@@ -1,5 +1,5 @@
 @regression @sanity
-Feature: verify JP Morgan logo on the home page
+Feature: google search test
 
   @verifyLogo
   Scenario Outline: verify logo on JP Morgan homepage

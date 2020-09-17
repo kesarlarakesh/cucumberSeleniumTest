@@ -29,8 +29,10 @@ public class GooglePageObject {
 	@FindBy(xpath = "//a[@href='https://www.jpmorgan.com/']")
 	private WebElement LinkClick;
 
-	@FindBy(xpath = "//a[@class='img-logo1 col']")
+	@FindBy(xpath = "//div[@class='logo-desktop-only']//div[@class='logo container-fluid']")
 	private WebElement jpMorganLogo;
+	
+	By verifyImage = By.xpath("//div[@class='logo-desktop-only']//div[@class='logo container-fluid']");
 
 	/* This Method is used to launch the application URL */
 	public void launchURL() {
@@ -68,13 +70,12 @@ public class GooglePageObject {
 		LinkClick.click();
 		WebDriverWait wait = new WebDriverWait(driver,
 				Integer.parseInt(ReadProperyFile.getConfigData("pageloadTimeout")));
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='logo container-fluid']")));
+		wait.until(ExpectedConditions.presenceOfElementLocated(verifyImage));
 	}
 
 	/* This Method is used to verify logo on the page */
 	public boolean verifyLogo() {
 		return TestBase.isWebElementVisible(jpMorganLogo);
 	}
-	
 	
 }
